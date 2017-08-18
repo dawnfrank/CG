@@ -17,7 +17,7 @@ LRESULT CALLBACK WindowsEventHandler(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM
 	case WM_SIZE:
 		break;
 	case WM_PAINT:
-		break;
+		window->Paint();
 	default:
 		break;
 	}

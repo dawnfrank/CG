@@ -4,8 +4,7 @@
 #include <vector>
 
 #include "platform.h"
-
-class Renderer;
+#include "renderer.h"
 
 class Window
 {
@@ -15,12 +14,22 @@ public:
 
 	void Close();
 	bool Update();
+	void Paint() { _renderer->Paint(); }
+
+	Renderer* GetRenderer() { return _renderer; }
+	HWND GetHandler() { return _win32_window; }
+	PAINTSTRUCT GetPainter() { return _ps; }
+	HDC GetHDC() { return _hdc; }
+
+	void SetHDC(HDC hdc) { _hdc = hdc; }
+
 private:
 	void _InitOSWindow();
 	void _DeInitOsWindow();
 	void _UpdateOSWindow();
 	
-	Renderer *_render = nullptr;
+
+	Renderer *_renderer = nullptr;
 
 	uint32_t _surface_size_x = 512;
 	uint32_t _surface_size_y = 512;
@@ -33,5 +42,6 @@ private:
 	std::string _win32_class_name;
 	static uint64_t _win32_class_id_counter;
 
-
+	PAINTSTRUCT   _ps;
+	HDC           _hdc;
 };

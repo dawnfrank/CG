@@ -1,9 +1,9 @@
 #include "Window.h"
 #include "renderer.h"
 
-Window::Window(Renderer * render, uint32_t size_x, uint32_t size_y, std::string name)
+Window::Window(Renderer * renderer, uint32_t size_x, uint32_t size_y, std::string name)
 {
-	_render = render;
+	_renderer = renderer;
 	_surface_size_x = size_x;
 	_surface_size_y = size_y;
 	_window_name = name;
