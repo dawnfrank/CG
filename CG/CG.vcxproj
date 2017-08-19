@@ -147,7 +147,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Matrix.cpp" />
     <ClCompile Include="renderer.cpp" />
+    <ClCompile Include="Vector.cpp" />
     <ClCompile Include="Window_win32.cpp" />
     <ClCompile Include="Window.cpp" />
   </ItemGroup>
@@ -155,7 +157,10 @@
     <None Include="renderer.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="camera.h" />
+    <ClInclude Include="Matrix.h" />
     <ClInclude Include="platform.h" />
+    <ClInclude Include="Vector.h" />
     <ClInclude Include="Window.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
