@@ -21,5 +21,6 @@ private:
 	void _BeginRenderer();
 	void _EndRenderer();
 
+	HDC _hdc;
 	Window *_window = nullptr;
 };

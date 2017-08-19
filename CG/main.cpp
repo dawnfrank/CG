@@ -19,6 +19,8 @@ int main() {
 			frame_counter = 0;
 			std::cout << "FPS:" << fps << std::endl;
 		}
+
+		r.Paint();
 	}
 
 	return 0;

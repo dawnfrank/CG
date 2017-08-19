@@ -1,5 +1,6 @@
 #pragma once
 
+#include <iostream>
 #include <string>
 #include <vector>
 
@@ -19,9 +20,9 @@ public:
 	Renderer* GetRenderer() { return _renderer; }
 	HWND GetHandler() { return _win32_window; }
 	PAINTSTRUCT GetPainter() { return _ps; }
-	HDC GetHDC() { return _hdc; }
 
-	void SetHDC(HDC hdc) { _hdc = hdc; }
+//	HDC GetHDC() { return _hdc; }
+//	void SetHDC(HDC hdc) { _hdc = hdc; }
 
 private:
 	void _InitOSWindow();
@@ -43,5 +44,5 @@ private:
 	static uint64_t _win32_class_id_counter;
 
 	PAINTSTRUCT   _ps;
-	HDC           _hdc;
+//	HDC           _hdc;
 };

@@ -9,7 +9,6 @@
 
 LRESULT CALLBACK WindowsEventHandler(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam) {
 	Window *window = reinterpret_cast<Window*>(GetWindowLongPtrW(hWnd, GWLP_USERDATA));
-
 	switch (uMsg) {
 	case WM_CLOSE:
 		window->Close();
@@ -17,7 +16,8 @@ LRESULT CALLBACK WindowsEventHandler(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM
 	case WM_SIZE:
 		break;
 	case WM_PAINT:
-		window->Paint();
+		//window->Paint();
+		break;
 	default:
 		break;
 	}
