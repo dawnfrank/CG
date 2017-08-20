@@ -3,8 +3,10 @@
 #include <vector>
 
 #include "platform.h"
+#include "fps.h"
 
 class Window;
+class World;
 
 class Renderer
 {
@@ -23,4 +25,7 @@ private:
 
 	HDC _hdc;
 	Window *_window = nullptr;
+	World *_world = nullptr;
+
+	FPS _fps;
 };

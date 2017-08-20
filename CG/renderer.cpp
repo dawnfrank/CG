@@ -2,14 +2,17 @@
 
 #include "Renderer.h"
 #include "Window.h"
+#include "world.h"
 
 Renderer::Renderer()
 {
+	_world = new World();
 }
 
 Renderer::~Renderer()
 {
 	delete _window;
+	delete _world;
 }
 
 Window * Renderer::OpenWindow(uint32_t size_x, uint32_t size_y, std::string name)
@@ -43,6 +46,9 @@ void Renderer::Paint(){
 
 bool Renderer::Run()
 {
-	if (nullptr != _window) return _window->Update();
+	if (nullptr != _window) {
+		_fps.Update();
+		return _window->Update();
+	}
 	return true;
 }

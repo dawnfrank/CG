@@ -153,6 +153,7 @@
     <ClCompile Include="Vector.cpp" />
     <ClCompile Include="Window_win32.cpp" />
     <ClCompile Include="Window.cpp" />
+    <ClCompile Include="world.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="renderer.h" />
@@ -160,10 +161,12 @@
   <ItemGroup>
     <ClInclude Include="Box.h" />
     <ClInclude Include="camera.h" />
+    <ClInclude Include="fps.h" />
     <ClInclude Include="Matrix.h" />
     <ClInclude Include="platform.h" />
     <ClInclude Include="Vector.h" />
     <ClInclude Include="Window.h" />
+    <ClInclude Include="world.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
