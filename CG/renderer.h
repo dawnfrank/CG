@@ -19,6 +19,8 @@ public:
 	bool Run();
 	void Paint();
 
+	World *GetWorld() { return _world; }
+
 private:
 	void _BeginRenderer();
 	void _EndRenderer();

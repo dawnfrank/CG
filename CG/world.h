@@ -8,6 +8,9 @@ public:
 	World();
 	~World();
 
+	Camera *GetCamera() { return _camera; }
+	Box *GetBox() { return _box; }
+
 private:
 	void _InitWorld();
 	void _DeInitWorld();
