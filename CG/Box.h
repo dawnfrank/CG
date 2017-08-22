@@ -6,6 +6,7 @@ class Box {
 public:
 	Box();
 
+	Vec3 GetCenter() { return _center; }
 
 private:
 //	Mat3 _coord;
