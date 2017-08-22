@@ -148,9 +148,7 @@
   <ItemGroup>
     <ClCompile Include="Box.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Matrix.cpp" />
     <ClCompile Include="renderer.cpp" />
-    <ClCompile Include="Vector.cpp" />
     <ClCompile Include="Window_win32.cpp" />
     <ClCompile Include="Window.cpp" />
     <ClCompile Include="world.cpp" />
@@ -162,9 +160,8 @@
     <ClInclude Include="Box.h" />
     <ClInclude Include="camera.h" />
     <ClInclude Include="fps.h" />
-    <ClInclude Include="Matrix.h" />
+    <ClInclude Include="mymath.h" />
     <ClInclude Include="platform.h" />
-    <ClInclude Include="Vector.h" />
     <ClInclude Include="Window.h" />
     <ClInclude Include="world.h" />
   </ItemGroup>

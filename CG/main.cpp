@@ -15,7 +15,7 @@ int main() {
 	while (r.Run()) {
 		r.Paint();
 
-		Mat3x3 matrixCamera = pCamera->GetCoord();
+		Mat3 matrixCamera = pCamera->GetCoord();
 	}
 
 	return 0;

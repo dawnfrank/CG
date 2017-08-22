@@ -1,5 +1,6 @@
 #pragma once
-#include "Matrix.h"
+
+#include "mymath.h"
 
 class Camera {
 public:
@@ -13,11 +14,12 @@ public:
 	void SetPerspective(const Vec3 &v) { _perspective = v; }
 	Vec3 GetPerspective() { return _perspective; }
 
-	Mat3x3 GetCoord() {
-		auto z = (_eye - _at).Normalize();
-		auto x = z.Cross(Vec3(0.0f, 1.0f, 0.0f));
-		auto y = x.Cross(z);
-		return Mat3x3(x, y, z);
+	Mat3 GetCoord() {
+		auto z = (_eye - _at);
+		z.normalize();
+		auto x = cross(Vec3(0.0f, 1.0f, 0.0f),z);
+		auto y = cross(z,x);
+		return Mat3(x, y, z);
 	}
 
 private:
