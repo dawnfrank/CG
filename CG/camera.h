@@ -4,7 +4,7 @@
 
 class Camera {
 public:
-	Camera() :_eye(10.0f, 10.0f, 10.0f), _at(0.0f, 0.0f, 0.0f), _perspective(0.0f,100.0f,0.8f){}
+	Camera() :_eye(5.0f, 5.0f, 0.0f), _at(0.0f, 0.0f, 0.0f), _perspective(0.0f,100.0f,0.8f){}
 
 
 	void SetView(const Vec3 &v1, const Vec3 &v2) { _eye = v1; _at = v2; }

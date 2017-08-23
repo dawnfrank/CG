@@ -18,6 +18,7 @@ public:
 			sz = i & 1 ? 1 : -1;
 			_vertexs.push_back(Vec3(sx*_extent[0]+_center[0], sy*_extent[1] + _center[1], sz*_extent[2] + _center[2]));
 		}
+		return _vertexs;
 	}
 
 private:
