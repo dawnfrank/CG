@@ -12,15 +12,16 @@ int main() {
 	Camera *pCamera = pWorld->GetCamera();
 	Box *pBox = pWorld->GetBox();
 
-	Vec3 boxPos,boxCameraPos;
-	Mat3 matrixCamera;
+	Mat3 CameraProj=Mat3(Vec3(1,0,0), Vec3(0,1,0), Vec3(0,0,0)).inverse();
+	Mat3 matrixCamera = pCamera->GetCoord();
+
+	auto vertexs = pBox->GetVertex();
+	for (auto &v : vertexs) {
+		v = CameraProj*matrixCamera*v;
+	}
 
 	while (r.Run()) {
 		r.Paint();
-
-		boxPos = pBox->GetCenter();
-		matrixCamera = pCamera->GetCoord();
-		boxCameraPos = matrixCamera*boxPos;
 	}
 
 	return 0;
